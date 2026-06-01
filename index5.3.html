@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 5.3 - Bootstrap Nav and Grid</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        .hero {
+            background: #e9ecef;
+            padding: 5.5rem 3.75rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.75rem, 5vw, 5rem);
+        }
+
+        .grid-cell {
+            min-height: 8rem;
+            background: #d3d3d3;
+            border: 2px solid #8a8a8a;
+            padding: .75rem 1.1rem;
+            font-size: 1.4rem;
+        }
+
+        .credit {
+            background: #d5c6c6;
+            font-size: clamp(2.25rem, 4vw, 4.75rem);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="hero rounded-bottom mb-5">
+        <h1 class="mb-0 fw-normal">Let's test the grid!</h1>
+    </header>
+
+    <nav class="nav gap-3 px-4 mb-5" aria-label="Exercise navigation">
+        <a class="nav-link active" aria-current="page" href="#">Active</a>
+        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    </nav>
+
+    <main class="container my-5">
+        <div class="row g-0">
+            <div class="col-6 grid-cell">First col</div>
+            <div class="col-6 grid-cell">Second col</div>
+            <div class="col-4 grid-cell">col</div>
+            <div class="col-4 grid-cell">col</div>
+            <div class="col-4 grid-cell">col</div>
+            <div class="col-3 grid-cell">col</div>
+            <div class="col-3 grid-cell">col</div>
+            <div class="col-3 grid-cell">col</div>
+            <div class="col-3 grid-cell">col</div>
+        </div>
+    </main>
+
+    <footer class="credit mt-5 py-2 text-center fw-bold">Created by ABC!</footer>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

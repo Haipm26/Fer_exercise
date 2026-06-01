@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 5.2 - Bootstrap Images</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        .hero {
+            background: #e9ecef;
+            padding: 5.5rem 1rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 5rem);
+        }
+
+        .tech-logo {
+            width: 100%;
+            height: 22rem;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="hero rounded-bottom text-center mb-5">
+        <h1 class="mb-0 fw-normal">My First Bootstrap Page</h1>
+    </header>
+
+    <main class="container py-4">
+        <div class="row align-items-center justify-content-center g-5">
+            <div class="col-12 col-md-4">
+                <img src="./images/generated/html5-logo.png" class="img-fluid tech-logo" alt="HTML5 logo">
+            </div>
+            <div class="col-12 col-md-4">
+                <img src="./images/generated/css3-logo.png" class="img-fluid tech-logo" alt="CSS3 logo">
+            </div>
+            <div class="col-12 col-md-4">
+                <img src="./images/generated/bootstrap-logo.png" class="img-fluid tech-logo" alt="Bootstrap logo">
+            </div>
+        </div>
+    </main>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

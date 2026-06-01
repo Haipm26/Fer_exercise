@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 5.5 - Student Details</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        :root {
+            --fpt-orange: #f58220;
+            --fpt-footer: #ef7436;
+            --fpt-cream: #ecd0ad;
+        }
+
+        .topbar {
+            background: var(--fpt-cream);
+        }
+
+        .topbar .nav-link {
+            color: #ef7f3a;
+            font-weight: 600;
+            padding-inline: .35rem;
+        }
+
+        .brand-mark {
+            width: 7rem;
+        }
+
+        .hero-students {
+            background: var(--fpt-orange);
+            padding: 5.25rem 0;
+        }
+
+        .hero-students img {
+            width: min(100%, 76rem);
+            max-height: 37rem;
+            object-fit: cover;
+        }
+
+        .student-card img {
+            height: 25rem;
+            object-fit: cover;
+        }
+
+        .btn-fpt {
+            --bs-btn-bg: var(--fpt-orange);
+            --bs-btn-border-color: var(--fpt-orange);
+            --bs-btn-color: #fff;
+            --bs-btn-hover-bg: #e87313;
+            --bs-btn-hover-border-color: #e87313;
+            width: 5.5rem;
+        }
+
+        .site-footer {
+            background: var(--fpt-footer);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg topbar py-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./images/ex5/ex5-image6.jpg" class="brand-mark" alt="FPT University logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#fptNav" aria-controls="fptNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="fptNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#">Trang chu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Nganh hoc</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Tuyen sinh</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#students">Sinh vien</a></li>
+                </ul>
+                <form class="d-flex align-items-center gap-2" role="search">
+                    <label for="siteSearch" class="form-label mb-0">Search:</label>
+                    <input class="form-control" id="siteSearch" type="search" aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-students text-center">
+        <img src="./images/generated/fpt-students.jpg" class="img-fluid" alt="FPT University students">
+    </header>
+
+    <main class="container py-4" id="students">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb bg-body-secondary rounded px-3 py-3 d-inline-flex">
+                <li class="breadcrumb-item"><a class="link-warning text-decoration-none" href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Students</li>
+            </ol>
+        </nav>
+
+        <h1 class="h2 fw-bold text-center my-5">Students Detail</h1>
+        <div class="row g-4 justify-content-center">
+            <div class="col-12 col-md-6">
+                <article class="card student-card h-100">
+                    <img src="./images/generated/student-1.jpg" class="card-img-top" alt="Nguyen Huu Quoc Khanh">
+                    <div class="card-body text-center">
+                        <p class="card-text mb-4">DE160182</p>
+                        <div class="row text-start mb-4">
+                            <div class="col-7">Nguyen Huu Quoc Khanh<br><input type="radio" name="s1"> Absent</div>
+                            <div class="col-5 text-end">DaNang<br><input type="radio" name="s1"> Present</div>
+                        </div>
+                        <button class="btn btn-fpt">Submit</button>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-md-6">
+                <article class="card student-card h-100">
+                    <img src="./images/generated/student-2.jpg" class="card-img-top" alt="Choy Vinh Thien">
+                    <div class="card-body text-center">
+                        <p class="card-text mb-4">DE160377</p>
+                        <div class="row text-start mb-4">
+                            <div class="col-7">Choy Vinh Thien<br><input type="radio" name="s2"> Absent</div>
+                            <div class="col-5 text-end">QuangNam<br><input type="radio" name="s2"> Present</div>
+                        </div>
+                        <button class="btn btn-fpt">Submit</button>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-md-6">
+                <article class="card student-card h-100">
+                    <img src="./images/generated/student-3.jpg" class="card-img-top" alt="Do Nguyen Phuc">
+                    <div class="card-body text-center">
+                        <p class="card-text mb-4">DE160547</p>
+                        <div class="row text-start mb-4">
+                            <div class="col-7">Do Nguyen Phuc<br><input type="radio" name="s3"> Absent</div>
+                            <div class="col-5 text-end">QuangNam<br><input type="radio" name="s3"> Present</div>
+                        </div>
+                        <button class="btn btn-fpt">Submit</button>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-md-6">
+                <article class="card student-card h-100">
+                    <img src="./images/generated/student-4.jpg" class="card-img-top" alt="Le Hoang Minh">
+                    <div class="card-body text-center">
+                        <p class="card-text mb-4">DE170049</p>
+                        <div class="row text-start mb-4">
+                            <div class="col-7">Le Hoang Minh<br><input type="radio" name="s4"> Absent</div>
+                            <div class="col-5 text-end">DaNang<br><input type="radio" name="s4"> Present</div>
+                        </div>
+                        <button class="btn btn-fpt">Submit</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer mt-5 py-4">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-md-6">
+                    <h2 class="h5 fw-bold">Our Address</h2>
+                    <p class="mb-0">Khu do thi FPT Da Nang<br>+84023111111<br>+852 8765 4321<br>fptudn@fpt.edu.vn</p>
+                </div>
+                <div class="col-md-6 text-md-center fs-4 fw-bold">G+ f in t YouTube mail</div>
+            </div>
+            <p class="text-center mt-4 mb-0">&copy; Copyright 2023</p>
+        </div>
+    </footer>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 8 - Form Controls</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        .booking-title {
+            font-size: clamp(2.75rem, 4vw, 4.5rem);
+        }
+
+        .form-shell,
+        .diagram-shell {
+            border: 1px solid #000;
+            min-height: 43rem;
+        }
+
+        .diagram-row {
+            border-bottom: 1px solid #000;
+        }
+
+        .diagram-chip,
+        .diagram-label {
+            display: inline-block;
+            border: 1px dashed #000;
+            border-radius: .35rem;
+            background: #fff8dc;
+            padding: .25rem .75rem;
+            font-weight: 700;
+        }
+
+        .diagram-input {
+            background: #d91b87;
+            color: #fff;
+            border-radius: .25rem;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .form-diagram {
+            background: #fff4cc;
+            border: 1px dashed #000;
+            border-radius: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container-fluid">
+        <div class="row g-5">
+            <section class="col-12 col-lg-6 form-shell p-4">
+                <div class="alert alert-warning alert-dismissible fade show py-2" role="alert">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+
+                <h1 class="booking-title fw-semibold mb-4">Form đặt vé máy bay</h1>
+                <form>
+                    <div class="mb-4">
+                        <label for="fullName" class="form-label fs-5">Họ tên</label>
+                        <div class="input-group input-group-lg">
+                            <span class="input-group-text">@</span>
+                            <input type="text" class="form-control" id="fullName" placeholder="Họ tên">
+                            <span class="input-group-text">vnd</span>
+                        </div>
+                        <div class="form-text fs-6">Phải nhập 5 ký tự, in hoa....</div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="address" class="form-label fs-5">Địa chỉ</label>
+                        <input type="text" class="form-control form-control-lg" id="address">
+                        <div class="form-text fs-6">Phải nhập 5 ký tự, in hoa....</div>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                            <label for="fromCity" class="form-label fs-5">Đi từ</label>
+                            <select id="fromCity" class="form-select form-select-lg">
+                                <option selected>Hà nội</option>
+                                <option>Đà Nẵng</option>
+                                <option>TP Hồ Chí Minh</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="toCity" class="form-label fs-5">Đến</label>
+                            <select id="toCity" class="form-select form-select-lg">
+                                <option selected>Hà nội</option>
+                                <option>Đà Nẵng</option>
+                                <option>TP Hồ Chí Minh</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <fieldset class="mb-4">
+                        <legend class="fs-5">Chọn chiều đi (Khứ hồi)</legend>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="depart">
+                            <label class="form-check-label fs-5" for="depart">Đi</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="return">
+                            <label class="form-check-label fs-5" for="return">Về</label>
+                        </div>
+                    </fieldset>
+
+                    <button type="submit" class="btn btn-primary btn-lg w-100">Đặt vé</button>
+                </form>
+            </section>
+
+            <section class="col-12 col-lg-6 diagram-shell p-0">
+                <div class="diagram-row text-center py-2" style="background:#ffe8cd;"><span class="diagram-label">alert</span></div>
+                <div class="diagram-row text-center py-4" style="background:#dbe9ff;"><code>&lt;h1&gt;&lt;/h1&gt;</code></div>
+                <div class="diagram-row p-3" style="background:#f7cdcd;">
+                    <div class="form-diagram p-3">
+                        <div class="mb-2"><span class="diagram-chip">form-group</span></div>
+                        <div class="mb-3"><span class="diagram-chip">label</span></div>
+                        <div class="border border-dark rounded p-2">
+                            <div class="text-center fw-bold mb-2">input group</div>
+                            <div class="row g-2 align-items-center">
+                                <div class="col-2"><span class="diagram-chip w-100 text-center">prepend</span></div>
+                                <div class="col-8"><div class="diagram-input">input</div></div>
+                                <div class="col-2"><span class="diagram-chip w-100 text-center">append</span></div>
+                            </div>
+                        </div>
+                        <div class="mt-3"><span class="diagram-chip">help text</span></div>
+                    </div>
+                </div>
+
+                <div class="p-3" style="background:#d83f9f; min-height:7.5rem;">
+                    <span class="diagram-chip">form-group</span>
+                </div>
+
+                <div class="row g-0 diagram-row" style="background:#84bd5c; min-height:8rem;">
+                    <div class="col-6 border-end border-dark p-3"><span class="diagram-chip">form-group</span></div>
+                    <div class="col-6 p-3"><span class="diagram-chip">form-group</span></div>
+                </div>
+
+                <div class="p-3" style="background:#d83f9f; min-height:7.5rem;">
+                    <span class="diagram-chip">form-group</span>
+                </div>
+
+                <div class="text-center py-5" style="background:#dbe9ff;">
+                    <code>&lt;input type=&quot;submit&quot; /&gt;</code>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

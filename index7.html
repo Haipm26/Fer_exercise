@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 7 - Cards Columns</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        .car-card {
+            border-radius: .25rem;
+            padding: 1.35rem;
+        }
+
+        .car-card img {
+            height: 14.75rem;
+            width: 100%;
+            object-fit: contain;
+            background: #fff;
+        }
+
+        .car-caption {
+            font-size: 1.15rem;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container-fluid px-0">
+        <h1 class="display-6 fw-bold mb-3">Cards Columns</h1>
+        <div class="row g-4">
+            <div class="col-12 col-md-4">
+                <article class="card car-card bg-primary h-100">
+                    <img src="./images/generated/car.png" class="card-img-top" alt="White Toyota SUV">
+                    <div class="card-body p-0 pt-1 text-center">
+                        <p class="card-text car-caption">Some text inside the first card</p>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-md-4">
+                <article class="card car-card bg-warning h-100">
+                    <img src="./images/generated/car.png" class="card-img-top" alt="White Toyota SUV">
+                    <div class="card-body p-0 pt-1 text-center">
+                        <p class="card-text car-caption">Some text inside the first card</p>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-md-4">
+                <article class="card car-card bg-danger h-100">
+                    <img src="./images/generated/car.png" class="card-img-top" alt="White Toyota SUV">
+                    <div class="card-body p-0 pt-1 text-center">
+                        <p class="card-text car-caption">Some text inside the first card</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
